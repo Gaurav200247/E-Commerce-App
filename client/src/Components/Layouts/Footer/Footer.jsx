@@ -24,7 +24,7 @@ const Footer = () => {
 
         <p className="mt-2">High quality is our first priority</p>
 
-        <p>Copyrights 2021 &copy; Gaurav Gupta</p>
+        <p>Copyrights 2022 &copy; Gaurav Gupta</p>
       </div>
       {/* --------------------------------- */}
       <div className="right-footer flex flex-col justify-between items-center">
