@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(16, 42, 66);
+  background-color: rgb(240, 245, 252);
+
+  font-family: "Didact Gothic", sans-serif;
+  /* font-family: 'League Spartan', sans-serif; */
+  /* font-family: 'Montserrat Alternates', sans-serif; */
+  /* font-family: 'Sawarabi Mincho', serif; */
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.greenColor {
+  color: green !important;
+}
+.redColor {
+  color: red !important;
+}
+
+.sideBar-toggle-btn {
+  position: fixed;
+  top: 80px;
+  left: 40px;
+  font-size: 2.5vmax;
+  cursor: pointer;
+  z-index: 40;
+  animation: scaleanimation 1s ease infinite alternate;
+  color: #094779;
+  padding: 3px;
+  border: 1px solid black;
+}
+
+@keyframes scaleanimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.4);
+  }
+}
+
+/* Header responsive css */
+@media only screen and (max-width: 900px) {
+  .nav-route-links-container,
+  .nav-icon-links-container {
+    display: none;
+  }
+  .nav-logo-container {
+    width: 40%;
+  }
+  .nav-logo {
+    width: 30%;
+  }
+  .toggle-btn-container {
+    width: 30%;
+    display: flex;
+  }
+  .follow-icons-container {
+    flex-direction: column;
+  }
+
+  .profile-icon {
+    height: 4vmax;
+    width: 4vmax;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .nav-logo {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .lower-nav {
+    display: none;
+  }
+}

@@ -1,0 +1,105 @@
+.shippingContainer {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgb(231, 231, 231);
+}
+
+.shippingBox {
+  background-color: white;
+  width: 35vw;
+  margin-top: 50px;
+  /* height: 70vh; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.shippingHeading {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.664);
+  font-size: 1.5vmax;
+  font-weight: bolder;
+  padding: 1vmax;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+  width: 50%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.shippingForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 2vmax;
+  height: 80%;
+  transition: all 0.5s;
+}
+
+.form-input {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-input > select {
+  width: 80%;
+  border: 1px solid rgba(0, 0, 0, 0.336);
+  padding: 0.5vmax;
+}
+
+.shippingBtn {
+  border: none;
+  width: 100%;
+  padding: 0.8vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .shippingContainer {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 70vh;
+  }
+  .shippingBox {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .shippingHeading {
+    font-size: 3vmax;
+    height: auto;
+  }
+  .shippingForm {
+    padding: 5vmax;
+  }
+  .shippingForm > div {
+    width: 100%;
+  }
+  .shippingBtn {
+    font-size: 1.9vmax;
+    padding: 1.8vmax;
+  }
+}

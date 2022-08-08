@@ -1,0 +1,142 @@
+.login-signup-container {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(231, 231, 231);
+  margin-top: 2vmax;
+}
+
+.login-signup-box {
+  background-color: white;
+  width: 35vw;
+  /* height: 75vh; */
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 1vmax;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.login-signup-toggle {
+  display: flex;
+  height: 3vmax;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.tab-btn {
+  font-size: 1.3vmax;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+
+  padding-bottom: 5px;
+}
+
+.login-signup-toggle > p:hover {
+  color: purple;
+}
+
+.login-form,
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 2.5vmax;
+  justify-content: space-evenly;
+  height: 70%;
+  transition: all 0.5s;
+  width: 100%;
+}
+
+.login-form > div,
+.signup-form > div {
+  display: flex;
+  width: 68%;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-top: 8px; */
+  margin-bottom: 10px;
+}
+
+.under-line {
+  color: purple;
+  border-bottom: 2px solid purple;
+}
+
+.signup-btn,
+.login-btn {
+  border: none;
+  width: 100%;
+  padding: 0.8vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+}
+
+#registerImage > img {
+  width: 2.8vmax;
+  /* margin-right: 5px; */
+  border-radius: 100%;
+}
+#registerImage > input {
+  display: flex;
+  padding: 0%;
+  margin-left: 5px;
+}
+
+#registerImage > input::file-selector-button {
+  cursor: pointer;
+  width: 100%;
+  z-index: 2;
+  height: 5vh;
+  border: none;
+  margin: 0%;
+  font: 400 0.8vmax;
+  transition: all 0.5s;
+  padding: 0 1vmax;
+  color: rgba(0, 0, 0);
+  background-color: rgb(235, 235, 235);
+}
+
+#registerImage > input::file-selector-button:hover {
+  background-color: rgb(235, 235, 235, 0.8);
+}
+
+@media screen and (max-width: 600px) {
+  .login-signup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .login-signup-box {
+    width: 100vw;
+    height: 80vh;
+  }
+  .login-form > div,
+  .signup-form > div {
+    width: 90%;
+  }
+  .login-signup-toggle {
+    height: 5vmax;
+    padding: 2vmax;
+  }
+  .tab-btn {
+    font-size: 2vmax;
+  }
+  .login-form,
+  .signup-form {
+    padding: 3vmax;
+  }
+}

@@ -1,0 +1,132 @@
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 5vmax;
+}
+
+.category-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  /* background-color: grey; */
+  margin: 1vmax;
+}
+.category-info-container > a {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vmax;
+  padding-top: 2vmax;
+  margin: 1vmax;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  transition: 0.3s;
+  background-color: #0549a5;
+  color: white;
+}
+.category-info-container > a:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: #054297;
+}
+.ci-img-container {
+  width: 40%;
+}
+.category-info-block {
+  /* background-color: orange; */
+  width: 50%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+.category-info-block > h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5vmax;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.category-info-block > p {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2vmax;
+}
+
+.category-info-container > a:first-child {
+  background-color: #ffb300;
+  color: black;
+}
+.category-info-container > a:first-child:hover {
+  background-color: #f1a900;
+  color: black;
+}
+.category-info-container > a:last-child {
+  background-color: #a90000;
+}
+.category-info-container > a:last-child:hover {
+  background-color: #830101;
+}
+
+.charts-container {
+  width: 55%;
+  margin: 2vmax;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.lineChart {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 2vmax;
+  width: 100%;
+  margin: 1em;
+  transition: 0.3s all ease;
+}
+.doughnutChart {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 2vmax;
+  width: 45%;
+  margin: 1em;
+  transition: 0.3s all ease;
+}
+.lineChart:hover,
+.doughnutChart:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+@media only screen and (max-width: 900px) {
+  .doughnutChart {
+    width: 45%;
+    margin: 5px;
+  }
+  .lineChart {
+    margin: 5px;
+    margin-top: 15px;
+  }
+  .ci-img-container {
+    width: 30%;
+  }
+  .charts-container {
+    width: 100%;
+    margin: 5px;
+  }
+  .category-info-container {
+    width: 100%;
+    margin: 5px;
+  }
+  .dashboard {
+    flex-direction: column;
+  }
+}

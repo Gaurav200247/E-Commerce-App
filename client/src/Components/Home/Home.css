@@ -1,0 +1,166 @@
+.video-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  color: white;
+}
+.video-banner > video {
+  z-index: -10;
+  top: 0;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.5);
+  height: auto;
+  z-index: -100;
+}
+.banner-info {
+  height: 100vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  margin-top: 5vmax;
+  z-index: 100;
+}
+.banner-info > h1 {
+  margin: 3vmax;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 2vmax;
+}
+.banner-info > p {
+  font-weight: 300;
+  font-size: 1.6vmax;
+}
+.banner-info > a > button {
+  margin-bottom: 5vmax;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+  border-radius: 0;
+  padding: 1vmax;
+  transition: all 0.3s;
+  width: 9vmax;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3vmax;
+}
+.banner-info > a > button:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+}
+
+.homeHeading {
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1.8vmax;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(21, 21, 21, 0.5);
+  width: 20vmax;
+  padding: 1vmax;
+  margin: 5vmax auto;
+  color: rgb(0, 0, 0, 0.7);
+}
+
+.container {
+  display: flex;
+
+  margin: 2vmax auto;
+  width: 80vw;
+
+  flex-wrap: wrap;
+  justify-content: center;
+
+  max-width: 100%;
+}
+
+.product-card {
+  width: 15vmax;
+
+  display: flex;
+  flex-direction: column;
+
+  text-decoration: none;
+
+  /* background-color: white; */
+  color: rgb(48, 48, 48);
+
+  margin: 2vmax;
+
+  transition: all 0.5s;
+  padding-bottom: 0.5vmax;
+}
+
+.product-card > img {
+  width: 15vmax;
+}
+
+.product-card > div {
+  margin: 0.5vmax;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card > p {
+  font-family: "Roboto";
+  font-size: 1.2vmax;
+  margin: 1vmax 0.5vmax;
+  margin-bottom: 0;
+}
+
+.product-card > span {
+  margin: 0.5vmax;
+  color: tomato;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1vmax;
+}
+
+.product-card:hover {
+  box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+
+  transform: translateY(-1vmax);
+}
+
+@media screen and (max-width: 1200px) {
+  .product-card > p {
+    font-size: 1.7vmax;
+  }
+  .banner-info {
+    margin-top: 0;
+    transform: translateY(-40px);
+    z-index: 50;
+  }
+  .product-card > div {
+    margin: 0vmax;
+    display: block;
+  }
+
+  .product-card > span {
+    font-size: 1.5vmax;
+  }
+
+  .product-card > div > span {
+    margin: 0 0.5vmax;
+    font-weight: 300;
+    font-family: "Roboto";
+    font-size: 1.5vmax;
+  }
+  .banner-info > h1 {
+    font-size: 1.5vmax;
+  }
+}

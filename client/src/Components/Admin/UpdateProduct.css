@@ -1,0 +1,163 @@
+.update-product-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 120vh;
+}
+.update-product-box > h1 {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.664);
+  font-size: 2.5vmax;
+  font-weight: bolder;
+  padding: 1vmax;
+  /* margin-bottom: 30px; */
+  border-bottom: 1px solid black;
+  margin: auto;
+}
+.update-product-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightskyblue;
+  padding: 3vmax;
+  width: 70%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form-div-1,
+.form-div-2,
+.form-div-3,
+.form-div-4 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.form-div-1 > div,
+.form-div-2 > div,
+.form-div-3 > div,
+.form-div-4 > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.form-div-1,
+.form-div-2 {
+  justify-content: space-around;
+}
+.form-div-3 {
+  align-items: flex-start;
+}
+
+.form-div-2 > div > select {
+  padding: 0.5vmax;
+  border-radius: 3px;
+  outline: none;
+  width: 80%;
+}
+
+.form-div-2 > div > input {
+  padding: 0.5vmax;
+  padding-left: 1vmax;
+  border-radius: 3px;
+  outline: none;
+  width: 2.8vmax;
+}
+
+.form-div-3 > textarea {
+  padding: 1vmax;
+  outline: none;
+  width: 80%;
+}
+.form-div-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-div-4 > div {
+  width: auto;
+}
+
+.update-product-btn {
+  width: 50%;
+  background-color: orange;
+  padding: 1vmax 1vmax;
+  transition: 0.3s all ease;
+}
+
+#updateProductFormFile > input::file-selector-button {
+  cursor: pointer;
+  width: 100%;
+  z-index: 2;
+  height: 5vh;
+  border: none;
+  margin: 0%;
+  font-size: 1.5vmax;
+  font-weight: bolder;
+  transition: all 0.5s;
+  padding: 0 1vmax;
+  color: rgba(0, 0, 0, 0.623);
+  background-color: rgb(255, 255, 255);
+}
+
+#updateProductFormFile > input::file-selector-button:hover {
+  background-color: rgb(235, 235, 235);
+}
+#updateProductFormImage {
+  width: 100%;
+  overflow: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#updateProductFormImage > img {
+  width: 5vmax;
+  object-fit: contain;
+  margin: 0 0.5vmax;
+}
+
+@media only screen and (max-width: 900px) {
+  .form-div-1,
+  .form-div-2,
+  .form-div-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .update-product-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .form-div-1 > div,
+  .form-div-2 > div,
+  .form-div-3 > div,
+  .form-div-4 > div {
+    margin-bottom: 2vmax;
+  }
+
+  .form-div-3 > textarea {
+    width: 80%;
+  }
+  .form-div-3 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .form-div-2 > div > input {
+    width: 100%;
+  }
+}

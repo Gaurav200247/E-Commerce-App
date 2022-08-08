@@ -1,0 +1,62 @@
+footer{
+  background-color: rgb(34, 33, 33);
+  margin-top: 10vmax;
+  padding: 2vmax;
+}
+.left-footer{
+    width: 20%;
+    height: 100%;
+}
+.left-footer> h1 {
+    font-size: 1vmax;
+    text-align: center; 
+    margin-bottom: 10px;
+}
+.left-footer> p {
+    text-align: center;
+    font-size: 1.2vmax;
+}
+.left-footer > img {
+    width: 10vmax;
+    margin: 1vmax;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.mid-footer{
+    width: 60%;
+    /* background-color: orange; */
+}
+.logo{
+    cursor: pointer;
+}
+.logo-img{
+    width: 4vmax;
+    height: 4vmax;   
+}
+.logo-text{
+    font-size: 2vmax;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.mid-footer > p {
+    max-width: 60%;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 1vmax;
+    margin: 1vmax auto;
+}
+
+.right-footer {
+    width: 20%;
+}
+.right-footer > h4 {
+    font-size: 1.4vmax;
+    margin-bottom: 20px;
+}
+.social-media-btn{
+    transition: 0.3s;
+    font-size: 3vmax;
+}
+.social-media-btn:hover{    
+    color: orangered;
+}

@@ -1,0 +1,211 @@
+.emptyCart {
+  margin: auto;
+  margin-top: 5vmax;
+  text-align: center;
+  padding: 10vmax;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.emptyCart > svg {
+  font-size: 5vmax;
+  color: red;
+  margin-bottom: 2vmax;
+}
+.emptyCart > p {
+  font-size: 2vmax;
+  margin-bottom: 2vmax;
+}
+.emptyCart > a {
+  background-color: rgb(51, 51, 51);
+  color: white;
+  border: none;
+  padding: 1vmax 3vmax;
+  cursor: pointer;
+  font: 400 1vmax;
+  text-decoration: none;
+  border: 1px solid rgb(51, 51, 51);
+  transition: 0.4s all ease;
+}
+.emptyCart > a:hover {
+  background-color: wheat;
+  color: rgb(51, 51, 51);
+}
+
+/* ------------------------------------------ */
+
+.cartPage {
+  padding: 4vmax;
+  margin-top: 5vmax;
+}
+
+.cartHeader {
+  background-image: linear-gradient(to right, #000724, #094779);
+  width: 90%;
+  box-sizing: border-box;
+  margin: auto;
+  color: white;
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+  font-size: 1.2vmax;
+}
+.cartHeader > p {
+  margin: 10px;
+}
+.cartHeader > p:first-child {
+  padding-left: 5vmax;
+}
+.cartHeader > p:last-child {
+  text-align: end;
+  padding-right: 9vmax;
+}
+/* ---------------------------------- */
+.cartContainer {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+  border: 1px solid black;
+  /* border-top: none; */
+  padding: 1vmax;
+  background-color: #cce8ff9c;
+}
+
+.cartInput {
+  display: flex;
+  align-items: center;
+  height: 8vmax;
+}
+
+.cartInput > button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.616);
+  padding: 1vmax;
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s;
+  /* font-size: 1.5vmax; */
+}
+.cartInput > button:hover {
+  background-color: rgba(0, 0, 0, 0.767);
+}
+
+.cartInput > input {
+  border: none;
+  padding: 1vmax;
+  width: 3vmax;
+  text-align: center;
+  outline: none;
+  font-size: 1vmax;
+  color: black;
+}
+
+.cartSubTotal {
+  display: flex;
+  padding: 1vmax;
+  height: 8vmax;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 1.5vmax;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.753);
+  padding-right: 9vmax;
+  font-weight: bold;
+}
+/* ================= */
+
+.cartGrossProfit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cartGrossProfitBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  box-sizing: border-box;
+  padding: 2vmax 0;
+  font-size: 2vmax;
+}
+
+.checkOutBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+.checkOutBtn > button {
+  width: 50%;
+  background-color: gold;
+  padding: 1vmax 1.5vmax 1vmax 1.5vmax;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: 0.3s;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  font-weight: bolder;
+  font-size: 1.2vmax;
+}
+.checkOutBtn > button:hover {
+  background-color: rgb(255, 187, 0);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.cartHeader-quantity {
+  padding-left: 1.5vmax;
+}
+
+@media screen and (max-width: 600px) {
+  .cartHeader {
+    width: 100%;
+    font-size: 1.5vmax;
+  }
+  .cartHeader > p:last-child {
+    padding-right: 3vmax;
+    padding-left: 3vmax;
+  }
+  .cartHeader > p:first-child {
+    /* padding-right: 3vmax; */
+    padding-left: 2vmax;
+  }
+  .cartContainer {
+    width: 100%;
+    grid-template-columns: 5fr 1fr 1fr;
+    margin: 0;
+    padding: 0.5vmax;
+  }
+  .cartPage {
+    padding: 0.5vmax;
+  }
+  .cartSubTotal {
+    margin-top: 5vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 3vmax;
+  }
+  .cartInput {
+    margin-top: 5vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cartInput > button {
+    padding: 1vmax;
+    font-size: 1.8vmax;
+  }
+  .cartInput > input {
+    padding: 1.2vmax 1vmax 1.2vmax 1vmax;
+    font-size: 1.8vmax;
+  }
+  .checkOutBtn > button {
+    width: 100%;
+    font-size: 2vmax;
+  }
+}

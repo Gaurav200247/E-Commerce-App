@@ -1,0 +1,40 @@
+.productReviewsContainer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  border-left: 1px solid rgba(0, 0, 0, 0.158);
+  height: 100vh;
+  margin-top: 5vmax;
+}
+
+.productReviewsForm {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 3vmax;
+  background-color: white;
+}
+
+.productReviewsFormHeading {
+  color: rgba(0, 0, 0, 0.733);
+  font-size: 3vmax;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.productReviewsForm > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1vmax;
+}
+
+@media screen and (max-width: 600px) {
+  .productReviewsContainer {
+    border-left: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.158);
+  }
+}

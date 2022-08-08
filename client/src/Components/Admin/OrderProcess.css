@@ -1,0 +1,120 @@
+.updateOrderForm {
+  margin: 5vmax 0;
+  padding: 3vmax;
+  background-color: white;
+  margin-top: 5vmax;
+}
+
+.updateOrderForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.updateOrderForm > div > select {
+  padding: 1vmax 4vmax;
+  margin: 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  border-radius: 4px;
+  /* font: 300 0.9vmax cursive; */
+  font-weight: bolder;
+  outline: none;
+}
+
+.updateOrderForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+  color: rgba(0, 0, 0, 0.623);
+}
+.confirmOrderPageAdmin {
+  /* height: 100vh; */
+  background-color: white;
+}
+
+.order-admin-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.order-admin-info-container > div:first-child {
+  width: 50%;
+}
+.order-admin-info-container > div:last-child {
+  width: 50%;
+}
+
+.confirmCartItemsAdmin {
+  padding: 3vmax;
+  padding-top: 2vmax;
+  height: 90vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  border: 1px solid black;
+  margin-top: 20px;
+}
+
+.confirmCartItemsAdmin > h1 {
+  font-size: 1.5vmax;
+  font-weight: bolder;
+  width: 100%;
+  padding-top: 2vmax;
+}
+
+.confirmCartItemsContainerAdmin > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5vmax;
+  font-weight: 600;
+  padding: 1vmax;
+  background-color: rgb(226, 226, 226);
+}
+
+.confirmCartItemsContainerAdmin > div > img {
+  width: 8vmax;
+  /* height: 3vmax; */
+}
+
+.confirmCartItemsContainerAdmin > div > a {
+  color: #575757;
+  margin: 0 2vmax;
+  width: 60%;
+  text-decoration: none;
+}
+
+.confirmCartItemsContainerAdmin > div > span {
+  color: #5e5e5e;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1vmax;
+}
+
+@media screen and (max-width: 600px) {
+  .updateOrderForm {
+    padding: 5vmax;
+  }
+
+  .updateOrderForm > div > select {
+    padding: 2.5vmax 5vmax;
+    font: 300 1.7vmax cursive;
+  }
+
+  .updateOrderForm > div > svg {
+    font-size: 2.8vmax;
+  }
+  .order-admin-info-container {
+    flex-direction: column;
+  }
+  .order-admin-info-container > div:first-child,
+  .order-admin-info-container > div:last-child {
+    width: 100%;
+  }
+  .confirmCartItemsAdmin {
+    height: auto;
+  }
+}

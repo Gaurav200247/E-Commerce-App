@@ -1,0 +1,58 @@
+.update-user-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.update-user-box > h1 {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.664);
+  font-size: 2.5vmax;
+  font-weight: bolder;
+  padding: 1vmax;
+  /* margin-bottom: 30px; */
+  border-bottom: 1px solid black;
+  margin: auto;
+}
+.update-user-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 30%;
+  margin-top: 20px;
+  padding: 2vmax;
+  background-color: rgba(245, 222, 179, 0.788);
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.form-div {
+  padding: 1vmax;
+  margin: 1vmax;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.role-select {
+  outline: none;
+  width: 180px;
+}
+.update-user-btn {
+  width: 100%;
+  padding: 0.5vmax;
+  border-radius: 4px;
+  transition: 0.4s all ease;
+}
+
+@media only screen and (max-width: 900px) {
+  .update-user-form {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .update-user-form {
+    width: 95%;
+  }
+}
