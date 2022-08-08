@@ -2,7 +2,7 @@ require("express-async-errors");
 
 // Config
 if (process.env.NODE_ENV !== "PRODUCTION") {
-  require("dotenv").config({ path: "Server/.env" });
+  require("dotenv").config({ path: "server/.env" });
 }
 
 const cloudinary = require("cloudinary").v2;
