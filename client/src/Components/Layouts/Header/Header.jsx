@@ -17,7 +17,7 @@ const Header = () => {
     if (isToggled === true) {
       setTimeout(() => {
         setIsToggled(false);
-      }, 4000);
+      }, 5000);
     }
   }, [isToggled]);
 
@@ -39,13 +39,15 @@ const Header = () => {
     <nav
       className={`flex flex-col justify-between w-full upper-nav ${
         Navcolor && "nav-color"
-      } ${location.pathname === "/" ? null : "nav-color"}`}
+      } ${location.pathname === "/" ? null : "nav-color"} ${
+        isToggled && "bg-zinc-700"
+      } duration-300`}
     >
       {/* =================== Upper Nav ===================  */}
       <div className="upper-nav flex justify-between items-center p-5 w-full">
         <Link
           to="/"
-          className="nav-logo-container flex justify-center items-center w-1/6"
+          className="nav-logo-container flex justify-center items-center w-3/6"
         >
           <span className="logo-heading text-xl truncate w-full">
             E-Shopping App
