@@ -29,7 +29,9 @@ const path = require("path");
 
 // Middlewares
 app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ limit: "30mb", extended: true }));
+app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(fileUpload());
 app.use(cookieParser());
 
