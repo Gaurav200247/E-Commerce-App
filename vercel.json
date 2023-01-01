@@ -2,5 +2,5 @@
   "version": 2,
   "name": "e-commerce-app",
   "builds": [{ "src": "./server/server.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "/server/server.js" }]
+  "routes": [{ "src": "/(.*)", "dest": "/server/" }]
 }
