@@ -41,15 +41,15 @@ app.use("/api/v1", UserRouter);
 app.use("/api/v1", OrderRouter);
 app.use("/api/v1", PaymentRouter);
 
-app.use(express.static(path.join(__dirname, "../client/build")));
+// app.use(express.static(path.join(__dirname, "../client/build")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../client/build/index.html"));
-});
-
-// app.get("/", (req, res) => {
-//   res.send("Welcome E-comerce Mern Stack Project");
+// app.get("*", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "../client/build/index.html"));
 // });
+
+app.get("/", (req, res) => {
+  res.send("Welcome E-comerce Mern Stack Project");
+});
 
 // Error Middlewares
 app.use(notFoundMiddleware);
