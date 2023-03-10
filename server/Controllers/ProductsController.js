@@ -29,38 +29,38 @@ const getAllProducts = async (req, res, next) => {
 
   // -------------------------------------filter-------------------------------------
 
-  if (NumericFilter) {
-    // console.log(NumericFilter);
-    const operatorMap = {
-      ">": "$gt",
-      ">=": "$gte",
-      "=": "$eq",
-      "<": "$lt",
-      "<=": "$lte",
-    };
+  // if (NumericFilter) {
+  //   // console.log(NumericFilter);
+  //   const operatorMap = {
+  //     ">": "$gt",
+  //     ">=": "$gte",
+  //     "=": "$eq",
+  //     "<": "$lt",
+  //     "<=": "$lte",
+  //   };
 
-    const regEx = /\b(<|>|>=|=|<|<=)\b/g;
+  //   const regEx = /\b(<|>|>=|=|<|<=)\b/g;
 
-    let filters = NumericFilter.map((item) =>
-      item.replace(regEx, (match) => `-${operatorMap[match]}-`)
-    );
+  //   let filters = NumericFilter.map((item) =>
+  //     item.replace(regEx, (match) => `-${operatorMap[match]}-`)
+  //   );
 
-    const properties = ["price"];
+  //   const properties = ["price"];
 
-    let values = [];
-    let operators = [];
+  //   let values = [];
+  //   let operators = [];
 
-    filters.forEach((item) => {
-      const [property_name, operator, value] = item.split("-");
+  //   filters.forEach((item) => {
+  //     const [property_name, operator, value] = item.split("-");
 
-      if (properties.includes(property_name)) {
-        operators.push(operator);
-        values.push(value);
-      }
-    });
+  //     if (properties.includes(property_name)) {
+  //       operators.push(operator);
+  //       values.push(value);
+  //     }
+  //   });
 
-    queryObject.price = { $gte: Number(values[0]), $lte: Number(values[1]) };
-  }
+  //   queryObject.price = { $gte: Number(values[0]), $lte: Number(values[1]) };
+  // }
 
   // console.log(queryObject);
 
