@@ -8,7 +8,7 @@ const xss = require("xss-clean");
 
 // Config
 if (process.env.NODE_ENV !== "PRODUCTION") {
-  require("dotenv").config({ path: ".env" });
+  require("dotenv").config({ path: "server/.env" });
 }
 
 const cloudinary = require("cloudinary").v2;
