@@ -1,4 +1,8 @@
 import axios from "axios";
+import { BASE_URL } from "./BASE_URL";
+
+// The cookie gets send automatically by the browser in every subsequent request.
+axios.defaults.withCredentials = true;
 
 export const createOrder = (order) => async (dispatch) => {
   try {
@@ -6,7 +10,11 @@ export const createOrder = (order) => async (dispatch) => {
 
     const config = { headers: { "Content-Type": "application/json" } };
 
-    const { data } = await axios.post("/api/v1/order/new", order, config);
+    const { data } = await axios.post(
+      `${BASE_URL}/api/v1/order/new`,
+      order,
+      config
+    );
 
     dispatch({ type: "CreateOrderSuccess", payload: data });
   } catch (error) {
@@ -18,7 +26,7 @@ export const getMyOrders = () => async (dispatch) => {
   try {
     dispatch({ type: "MyOrdersRequest" });
 
-    const { data } = await axios.get("/api/v1/order/me");
+    const { data } = await axios.get(`${BASE_URL}/api/v1/order/me`);
 
     dispatch({ type: "MyOrdersSuccess", payload: data });
   } catch (error) {
@@ -30,7 +38,7 @@ export const getOrderDetails = (orderId) => async (dispatch) => {
   try {
     dispatch({ type: "OrderDetailsRequest" });
 
-    const { data } = await axios.get(`/api/v1/order/${orderId}`);
+    const { data } = await axios.get(`${BASE_URL}/api/v1/order/${orderId}`);
 
     dispatch({ type: "OrderDetailsSuccess", payload: data.order });
   } catch (error) {
@@ -42,7 +50,7 @@ export const getAllOrders = () => async (dispatch) => {
   try {
     dispatch({ type: "AllOrdersRequest" });
 
-    const { data } = await axios.get(`/api/v1/admin/orders`);
+    const { data } = await axios.get(`${BASE_URL}/api/v1/admin/orders`);
 
     dispatch({ type: "AllOrdersSuccess", payload: data });
   } catch (error) {
@@ -54,7 +62,9 @@ export const deleteOrder = (id) => async (dispatch) => {
   try {
     dispatch({ type: "DeleteOrderRequest" });
 
-    const { data } = await axios.delete(`/api/v1/admin/orders/${id}`);
+    const { data } = await axios.delete(
+      `${BASE_URL}/api/v1/admin/orders/${id}`
+    );
 
     dispatch({ type: "DeleteOrderSuccess", payload: data });
   } catch (error) {
@@ -68,7 +78,7 @@ export const updateOrder = (id, orderData) => async (dispatch) => {
 
     const config = { headers: { "Content-Type": "application/json" } };
     const { data } = await axios.put(
-      `/api/v1/admin/orders/${id}`,
+      `${BASE_URL}/api/v1/admin/orders/${id}`,
       orderData,
       config
     );

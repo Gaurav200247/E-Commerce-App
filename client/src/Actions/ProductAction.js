@@ -1,4 +1,8 @@
 import axios from "axios";
+import { BASE_URL } from "./BASE_URL";
+
+// The cookie gets send automatically by the browser in every subsequent request.
+axios.defaults.withCredentials = true;
 
 export const getProducts =
   (name = "", currentPage = 1, price = [0, 200000], category, ratings = 5) =>
@@ -6,10 +10,10 @@ export const getProducts =
     try {
       dispatch({ type: "AllProductsRequest" });
 
-      let link = `/api/v1/products/?name=${name}&page=${currentPage}&NumericFilter=price>=${price[0]}&NumericFilter=price<=${price[1]}&rating=${ratings}`;
+      let link = `${BASE_URL}/api/v1/products/?name=${name}&page=${currentPage}&NumericFilter=price>=${price[0]}&NumericFilter=price<=${price[1]}&rating=${ratings}`;
 
       if (category) {
-        link = `/api/v1/products/?name=${name}&page=${currentPage}&NumericFilter=price>=${price[0]}&NumericFilter=price<=${price[1]}&category=${category}&rating=${ratings}`;
+        link = `${BASE_URL}/api/v1/products/?name=${name}&page=${currentPage}&NumericFilter=price>=${price[0]}&NumericFilter=price<=${price[1]}&category=${category}&rating=${ratings}`;
       }
 
       const { data } = await axios.get(link);
@@ -31,7 +35,7 @@ export const getProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: "ProductDetailsRequest" });
 
-    const { data } = await axios.get(`/api/v1/products/${id}`);
+    const { data } = await axios.get(`${BASE_URL}/api/v1/products/${id}`);
 
     dispatch({
       type: "ProductDetailsSuccess",
@@ -57,7 +61,9 @@ export const deleteProduct = (id) => async (dispatch) => {
   try {
     dispatch({ type: "DeleteProductRequest" });
 
-    const { data } = await axios.delete(`/api/v1/admin/products/${id}`);
+    const { data } = await axios.delete(
+      `${BASE_URL}/api/v1/admin/products/${id}`
+    );
 
     dispatch({
       type: "DeleteProductSuccess",
@@ -76,7 +82,7 @@ export const getAllProductsAdmin = () => async (dispatch) => {
   try {
     dispatch({ type: "AdminAllProductsRequest" });
 
-    const { data } = await axios.get(`/api/v1/admin/products`);
+    const { data } = await axios.get(`${BASE_URL}/api/v1/admin/products`);
 
     dispatch({
       type: "AdminAllProductsSuccess",
@@ -97,7 +103,7 @@ export const CreateNewProduct = (productData) => async (dispatch) => {
 
     const config = { headers: { "Content-Type": "application/json" } };
     const { data } = await axios.post(
-      `/api/v1/admin/products`,
+      `${BASE_URL}/api/v1/admin/products`,
       productData,
       config
     );
@@ -120,7 +126,7 @@ export const updateProduct = (id, productData) => async (dispatch) => {
 
     const config = { headers: { "Content-Type": "application/json" } };
     const { data } = await axios.patch(
-      `/api/v1/admin/products/${id}`,
+      `${BASE_URL}/api/v1/admin/products/${id}`,
       productData,
       config
     );

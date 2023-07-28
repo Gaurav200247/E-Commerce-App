@@ -1,8 +1,12 @@
 import axios from "axios";
+import { BASE_URL } from "./BASE_URL";
+
+// The cookie gets send automatically by the browser in every subsequent request.
+axios.defaults.withCredentials = true;
 
 // Add to Cart
 export const addItemstoCart = (id, quantity) => async (dispatch, getState) => {
-  const { data } = await axios.get(`/api/v1/products/${id}`);
+  const { data } = await axios.get(`${BASE_URL}/api/v1/products/${id}`);
   //   put the data of single item in payload which add it to cartItems array in cartReducer
   dispatch({
     type: "AddToCart",

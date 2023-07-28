@@ -1,4 +1,8 @@
 import axios from "axios";
+import { BASE_URL } from "./BASE_URL";
+
+// The cookie gets send automatically by the browser in every subsequent request.
+axios.defaults.withCredentials = true;
 
 export const createNewReview = (reviewData) => async (dispatch) => {
   try {
@@ -9,7 +13,11 @@ export const createNewReview = (reviewData) => async (dispatch) => {
         "Content-Type": "appliaction/json",
       },
     };
-    const { data } = await axios.put("/api/v1/review", reviewData, config);
+    const { data } = await axios.put(
+      `${BASE_URL}/api/v1/review`,
+      reviewData,
+      config
+    );
 
     dispatch({ type: "CreateReviewSuccess", payload: data.success });
   } catch (error) {
@@ -22,7 +30,7 @@ export const deleteReview = (reviewId, productId) => async (dispatch) => {
     dispatch({ type: "DeleteReviewRequest" });
 
     const { data } = await axios.delete(
-      `/api/v1/review?reviewID=${reviewId}&productID=${productId}`
+      `${BASE_URL}/api/v1/review?reviewID=${reviewId}&productID=${productId}`
     );
 
     dispatch({ type: "DeleteReviewSuccess", payload: data.success });
@@ -35,7 +43,9 @@ export const getAllreviewsAdmin = (productId) => async (dispatch) => {
   try {
     dispatch({ type: "AllReviewRequest" });
 
-    const { data } = await axios.get(`/api/v1/review?productID=${productId}`);
+    const { data } = await axios.get(
+      `${BASE_URL}/api/v1/review?productID=${productId}`
+    );
 
     dispatch({ type: "AllReviewSuccess", payload: data });
   } catch (error) {
