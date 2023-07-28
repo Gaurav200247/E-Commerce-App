@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js",
-    "dev": "node server/index.js",
+    "dev": "nodemon server/index.js",
     "build": "yarn install && cd ./client && npm install && npm run build"
   },
   "keywords": [],

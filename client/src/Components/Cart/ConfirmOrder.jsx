@@ -67,10 +67,15 @@ const ConfirmOrder = () => {
                     <div key={item.product}>
                       <img src={item.image} alt={item.product} />
                       <Link to={`/product/${item.product}`}>{item.name}</Link>
-                      <span>
-                        {item.quantity} X {item.price}{" "}
-                        <b>{`Total : ₹ ${item.price * item.quantity}`}</b>
-                      </span>
+                      <p className="flex flex-col justify-between items-start font-semibold text-sm px-2 pl-12">
+                        <span>
+                          {" "}
+                          {item.quantity} X {item.price}
+                        </span>
+                        <span className="truncate">{`Total : ₹ ${
+                          item.price * item.quantity
+                        }`}</span>
+                      </p>
                     </div>
                   );
                 })}

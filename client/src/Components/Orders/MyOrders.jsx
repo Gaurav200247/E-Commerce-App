@@ -92,7 +92,7 @@ const MyOrders = () => {
         <Loading />
       ) : (
         <>
-          <div className="myOrdersPage">
+          <div className="myOrdersPage pb-52">
             <DataGrid
               rows={rows}
               columns={columns}

@@ -26,7 +26,7 @@ const CheckOutSteps = ({ activeSteps }) => {
   ];
 
   return (
-    <div className="checkOutSteps bg-white mt-3">
+    <div className="checkOutSteps  mt-3 p-2">
       <Stepper activeStep={activeSteps} alternativeLabel>
         {Steps.map((item, index) => {
           return (

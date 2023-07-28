@@ -1,13 +1,15 @@
 .emptyCart {
   margin: auto;
-  margin-top: 5vmax;
   text-align: center;
   padding: 10vmax;
-  height: 50vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  padding-bottom: 20vmax;
+  padding-top: 20vmax;
 }
 .emptyCart > svg {
   font-size: 5vmax;
@@ -17,6 +19,7 @@
 .emptyCart > p {
   font-size: 2vmax;
   margin-bottom: 2vmax;
+  padding: 1vmax;
 }
 .emptyCart > a {
   background-color: rgb(51, 51, 51);

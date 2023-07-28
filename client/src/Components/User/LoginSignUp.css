@@ -1,27 +1,31 @@
 .login-signup-container {
-  width: 100vw;
-  height: 100vh;
   max-width: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   background-color: rgb(231, 231, 231);
-  margin-top: 2vmax;
+
+  padding-bottom: 10vmax;
+  padding-top: 5vmax;
 }
 
 .login-signup-box {
   background-color: white;
-  width: 35vw;
-  /* height: 75vh; */
+  width: 30%;
+
   box-sizing: border-box;
   overflow: hidden;
+
   padding: 1vmax;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-  margin-top: 8vmax;
+  /* margin-top: 8vmax; */
 }
 
 .login-signup-toggle {
@@ -50,10 +54,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto;
+
   padding: 2.5vmax;
   justify-content: space-evenly;
-  height: 70%;
+
   transition: all 0.5s;
   width: 100%;
 }
@@ -61,7 +65,7 @@
 .login-form > div,
 .signup-form > div {
   display: flex;
-  width: 68%;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   /* margin-top: 8px; */
@@ -78,6 +82,7 @@
   border: none;
   width: 100%;
   padding: 0.8vmax;
+  margin-top: 2vmax;
   cursor: pointer;
   transition: all 0.5s;
   border-radius: 4px;

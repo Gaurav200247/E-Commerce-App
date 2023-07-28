@@ -24,8 +24,11 @@ const LoginForm = () => {
   return (
     <form className="login-form" onSubmit={loginSubmit}>
       <div className="login-email">
-        <EmailIcon className="mr-3" />
+        <p className="w-[20%] flex justify-center items-center">
+          <EmailIcon className="mr-3 " />
+        </p>
         <TextField
+          className="w-[80%]"
           label="Email"
           name="email"
           variant="outlined"
@@ -36,8 +39,11 @@ const LoginForm = () => {
       </div>
 
       <div className="login-password mt-2">
-        <LockIcon className="mr-3" />
+        <p className="w-[20%] flex justify-center items-center">
+          <LockIcon className="mr-3 " />
+        </p>
         <TextField
+          className="w-[80%]"
           label="Password"
           name="password"
           variant="outlined"

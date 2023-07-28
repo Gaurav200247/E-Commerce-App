@@ -203,7 +203,8 @@
   font-family: "Gill Sans";
   text-align: center;
   color: rgba(0, 0, 0, 0.548);
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .submitDialog {

@@ -1,47 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { BsSearch, BsCart3 } from "react-icons/bs";
 import { FaBars, FaUserCircle } from "react-icons/fa";
-import "./Header.css";
-import { Link, useLocation } from "react-router-dom";
+
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+
+import "./Header.css";
 
 const Header = () => {
   const [isToggled, setIsToggled] = useState(false);
   const { isAuthenticated } = useSelector((state) => state.user);
   const { cartItems } = useSelector((state) => state.cart);
-  const [Navcolor, setNavcolor] = useState(false);
-
-  const location = useLocation();
-
-  useEffect(() => {
-    if (isToggled === true) {
-      setTimeout(() => {
-        setIsToggled(false);
-      }, 5000);
-    }
-  }, [isToggled]);
-
-  const changeColor = () => {
-    if (window.scrollY >= 300) {
-      setNavcolor(true);
-    } else {
-      setNavcolor(false);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", changeColor);
-    return () => {
-      window.removeEventListener("scroll", changeColor);
-    };
-  }, []);
 
   return (
     <nav
-      className={`flex flex-col justify-between w-full upper-nav ${
-        Navcolor && "nav-color"
-      } ${location.pathname === "/" ? null : "nav-color"} ${
-        isToggled && "bg-zinc-700"
-      } duration-300`}
+      className={`flex flex-col justify-between w-full upper-nav bg-zinc-800`}
     >
       {/* =================== Upper Nav ===================  */}
       <div className="upper-nav flex justify-between items-center p-5 w-full">

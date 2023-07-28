@@ -61,8 +61,12 @@ const RegisterForm = () => {
       onSubmit={RegisterSubmit}
     >
       <div className="signup-name">
-        <FaceIcon className="mr-3" />
+        <p className="w-[20%] flex justify-center items-center">
+          <FaceIcon className="mr-3" />
+        </p>
+
         <TextField
+          className="w-[80%]"
           label="Username"
           name="name"
           variant="outlined"
@@ -72,8 +76,12 @@ const RegisterForm = () => {
       </div>
 
       <div className="signup-email">
-        <EmailIcon className="mr-3" />
+        <p className="w-[20%] flex justify-center items-center">
+          <EmailIcon className="mr-3" />
+        </p>
+
         <TextField
+          className="w-[80%]"
           label="Email"
           name="email"
           variant="outlined"
@@ -83,9 +91,11 @@ const RegisterForm = () => {
       </div>
 
       <div className="signup-password">
-        <LockOpenIcon className="mr-3" />
-
+        <p className="w-[20%] flex justify-center items-center">
+          <LockOpenIcon className="mr-3" />
+        </p>
         <TextField
+          className="w-[80%]"
           label="Password"
           name="password"
           variant="outlined"
@@ -109,8 +119,17 @@ const RegisterForm = () => {
       </div>
 
       <div className="signup-image" id="registerImage">
-        <img src={avatarPreview} alt="Avatar Preview" />
-        <input type="file" name="avatar" onChange={RegisterDataChange} />
+        <img
+          src={avatarPreview}
+          alt="Avatar Preview"
+          className="w-[20%] ml-2"
+        />
+        <input
+          type="file"
+          name="avatar"
+          onChange={RegisterDataChange}
+          className="w-[80%]"
+        />
       </div>
 
       <input

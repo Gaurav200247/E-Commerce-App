@@ -61,69 +61,88 @@ const ShippingInfo = () => {
 
       <CheckOutSteps activeSteps={0} />
 
-      <div className="shippingContainer">
-        <div className="shippingBox">
-          <h2 className="shippingHeading">Shipping Details</h2>
+      <div className="shippingBox">
+        <h2 className="shippingHeading">Shipping Details</h2>
 
-          <form onSubmit={ShippingSubmit} className="shippingForm">
-            <div className="address-input  form-input">
-              <HomeIcon />
-              <TextField
-                id="outlined-basic"
-                label="Address"
-                variant="outlined"
-                value={address}
-                onChange={(e) => setAddress(e.target.value)}
-                required
-              />
-            </div>
+        <form onSubmit={ShippingSubmit} className="shippingForm">
+          <div className="address-input  form-input">
+            <HomeIcon />
+            <TextField
+              id="outlined-basic"
+              label="Address"
+              variant="outlined"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              required
+            />
+          </div>
 
-            <div className="city-input form-input">
-              <LocationCityIcon />
-              <TextField
-                id="outlined-basic"
-                label="City"
-                variant="outlined"
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
-                required
-              />
-            </div>
+          <div className="city-input form-input">
+            <LocationCityIcon />
+            <TextField
+              id="outlined-basic"
+              label="City"
+              variant="outlined"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              required
+            />
+          </div>
 
-            <div className="pin-input form-input">
-              <PinDropIcon />
-              <TextField
-                id="outlined-basic"
-                label="Pin Code"
-                variant="outlined"
-                value={pinCode}
-                onChange={(e) => setPinCode(e.target.value)}
-                required
-              />
-            </div>
+          <div className="pin-input form-input">
+            <PinDropIcon />
+            <TextField
+              id="outlined-basic"
+              label="Pin Code"
+              variant="outlined"
+              value={pinCode}
+              onChange={(e) => setPinCode(e.target.value)}
+              required
+            />
+          </div>
 
-            <div className="phone-input form-input">
-              <PhoneIcon />
-              <TextField
-                id="outlined-basic"
-                label="Phone no."
-                variant="outlined"
-                value={phoneNo}
-                onChange={(e) => setPhoneNo(e.target.value)}
-                required
-              />
-            </div>
+          <div className="phone-input form-input">
+            <PhoneIcon />
+            <TextField
+              id="outlined-basic"
+              label="Phone no."
+              variant="outlined"
+              value={phoneNo}
+              onChange={(e) => setPhoneNo(e.target.value)}
+              required
+            />
+          </div>
 
-            <div className="country-input form-input">
-              <PublicIcon />
+          <div className="country-input form-input">
+            <PublicIcon />
+            <select
+              required
+              value={country}
+              onChange={(e) => setCountry(e.target.value)}
+            >
+              <option value="">Country</option>
+              {Country &&
+                Country.getAllCountries().map((item) => {
+                  return (
+                    <option key={item.isoCode} value={item.isoCode}>
+                      {item.name}
+                    </option>
+                  );
+                })}
+            </select>
+          </div>
+
+          {country && (
+            <div className="state-input form-input">
+              <TransferWithinAStationIcon />
               <select
                 required
-                value={country}
-                onChange={(e) => setCountry(e.target.value)}
+                value={state}
+                onChange={(e) => setState(e.target.value)}
               >
-                <option value="">Country</option>
-                {Country &&
-                  Country.getAllCountries().map((item) => {
+                <option value="">State</option>
+                {State &&
+                  State.getStatesOfCountry(country).map((item) => {
                     return (
                       <option key={item.isoCode} value={item.isoCode}>
                         {item.name}
@@ -132,35 +151,14 @@ const ShippingInfo = () => {
                   })}
               </select>
             </div>
+          )}
 
-            {country && (
-              <div className="state-input form-input">
-                <TransferWithinAStationIcon />
-                <select
-                  required
-                  value={state}
-                  onChange={(e) => setState(e.target.value)}
-                >
-                  <option value="">State</option>
-                  {State &&
-                    State.getStatesOfCountry(country).map((item) => {
-                      return (
-                        <option key={item.isoCode} value={item.isoCode}>
-                          {item.name}
-                        </option>
-                      );
-                    })}
-                </select>
-              </div>
-            )}
-
-            <input
-              type="submit"
-              value="Continue"
-              className="shippingBtn  bg-orange-500  text-white hover:bg-orange-400"
-            />
-          </form>
-        </div>
+          <input
+            type="submit"
+            value="Continue"
+            className="shippingBtn  bg-orange-500  text-white hover:bg-orange-400"
+          />
+        </form>
       </div>
     </>
   );
