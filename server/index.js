@@ -44,12 +44,12 @@ app.use(
 );
 
 // http://localhost:3000
-// https://e-commerce-app-frontend-kappa.vercel.app/
+// https://e-commerce-app-frontend-kappa.vercel.app
 
 // Extra Packages for api security
 app.use(
   cors({
-    origin: "https://e-commerce-app-frontend-kappa.vercel.app/",
+    origin: "https://e-commerce-app-frontend-kappa.vercel.app",
     credentials: true,
   })
 );
