@@ -7,13 +7,11 @@
 
   background-color: rgb(231, 231, 231);
 
-  padding-bottom: 10vmax;
-  padding-top: 5vmax;
 }
 
 .login-signup-box {
   background-color: white;
-  width: 30%;
+  
 
   box-sizing: border-box;
   overflow: hidden;
@@ -22,7 +20,7 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   /* margin-top: 8vmax; */

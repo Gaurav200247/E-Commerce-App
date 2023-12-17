@@ -27,19 +27,19 @@ const Header = () => {
           </span>
         </Link>
 
-        <div className="nav-route-links-container flex justify-between items-center tracking-wider    w-2/6">
-          <Link to="/" className="nav-route-links">
+        <div className="nav-route-links-container flex justify-end items-center tracking-wider    w-2/6">
+          <Link to="/" className="nav-route-links  mx-5">
             Home
           </Link>
-          <Link to="/products" className="nav-route-links">
+          <Link to="/products" className="nav-route-links mx-5">
             Products
           </Link>
-          <Link to="/contact" className="nav-route-links">
+          {/* <Link to="/contact" className="nav-route-links">
             Contact
-          </Link>
-          <Link to="/about" className="nav-route-links">
+          </Link> */}
+          {/* <Link to="/about" className="nav-route-links">
             About
-          </Link>
+          </Link> */}
         </div>
 
         <div className="nav-icon-links-container flex justify-between items-center pr-10 pl-10 w-1/6 ">
@@ -87,12 +87,12 @@ const Header = () => {
           <Link to="/products" className="toggled-nav-route-links p-2">
             Products
           </Link>
-          <Link to="/contact" className="toggled-nav-route-links p-2">
+          {/* <Link to="/contact" className="toggled-nav-route-links p-2">
             Contact
-          </Link>
-          <Link to="/about" className="toggled-nav-route-links p-2">
+          </Link> */}
+          {/* <Link to="/about" className="toggled-nav-route-links p-2">
             About
-          </Link>
+          </Link> */}
         </div>
 
         <div className="toggled-nav-icon-links-container flex justify-between items-center p-2 ">

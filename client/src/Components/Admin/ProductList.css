@@ -1,11 +1,12 @@
 .productListContainer {
   width: 100%;
+  min-height: 100vh;
   box-sizing: border-box;
   background-color: rgb(255, 255, 255);
   border-left: 1px solid rgba(0, 0, 0, 0.158);
   display: flex;
   flex-direction: column;
-  margin-top: 5vmax;
+  /* margin-top: 5vmax; */
 }
 
 #productListHeading {

@@ -8,7 +8,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className=" text-white flex justify-between items-center max-w-full">
+    <footer className=" text-white flex justify-between items-center w-full">
       {/* --------------------------------- */}
       <div className="left-footer flex flex-col justify-between items-center">
         <h1>DOWNLOAD OUR APP</h1>

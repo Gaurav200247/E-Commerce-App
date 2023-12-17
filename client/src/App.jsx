@@ -53,6 +53,7 @@ import NotFound from "./Components/Layouts/NotFound/NotFound";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { BASE_URL } from "./Actions/BASE_URL.js";
 
 const App = () => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -60,7 +61,7 @@ const App = () => {
   const [stripeAPIkey, setstripeAPIkey] = useState("");
 
   async function getstripeAPIkey() {
-    const { data } = await axios.get("/api/v1/stripeapikey");
+    const { data } = await axios.get(`${BASE_URL}/api/v1/stripeapikey`);
 
     setstripeAPIkey(data.stripeAPIKey);
   }
@@ -84,7 +85,7 @@ const App = () => {
   // console.log(isAdmin);
 
   return (
-    <>
+    <div className="flex flex-col justify-between items-center min-h-screen w-full">
       <ToastContainer
         position="bottom-center"
         autoClose={3000}
@@ -106,6 +107,7 @@ const App = () => {
 
       {isAuthenticated && <LoginSpeedDial user={user} />}
 
+      <div className="w-full min-h-screen">
       <Routes>
         {/* ------------------ Single protected Route starts------------------*/}
         {stripeAPIkey && (
@@ -135,8 +137,8 @@ const App = () => {
         <Route path="/password/forgot" element={<ForgotPassword />} />
         <Route path="/password/reset/:token" element={<ResetPassword />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="/about" element={<About />} /> */}
+        {/* <Route path="/contact" element={<Contact />} /> */}
         <Route
           component={
             window.location.pathname === "/process/payment" ? null : (
@@ -196,8 +198,9 @@ const App = () => {
 
         {/* ------------------Protected Routes for Admin Ends ------------------ */}
       </Routes>
+      </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

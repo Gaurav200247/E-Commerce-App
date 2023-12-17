@@ -43,8 +43,8 @@ const LoginSignUp = () => {
         <Loading />
       ) : (
         <>
-          <div className="login-signup-container">
-            <div className="login-signup-box">
+          <div className="login-signup-container h-screen">
+            <div className="login-signup-box w-full sm:w-[70%] md:w-[40%] ">
               <div className="login-signup-toggle">
                 <p
                   onClick={() => setTab("register")}

@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 5vmax;
+  /* margin-top: 5vmax; */
+  min-height: 100vh;
 }
 
 .category-info-container {

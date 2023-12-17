@@ -49,6 +49,7 @@ app.use(
 // Extra Packages for api security
 app.use(
   cors({
+    // origin: "http://localhost:3000",
     origin: "https://e-commerce-app-frontend-kappa.vercel.app",
     credentials: true,
   })

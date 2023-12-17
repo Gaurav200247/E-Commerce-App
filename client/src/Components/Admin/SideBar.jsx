@@ -19,7 +19,7 @@ const SideBar = () => {
   const { isSideBar } = useSelector((state) => state.sidebar);
 
   return (
-    <div className={`sidebar ${isSideBar && "show-sideBar"}`}>
+    <div className={`sidebar ${isSideBar && "show-sideBar"} z-[500]`}>
       <div className="close-sidebar-btn-container">
         <CloseIcon
           className="cursor-pointer text-5xl"

@@ -19,6 +19,7 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ClearErrors, createOrder } from "../../Actions/OrderAction";
+import { BASE_URL } from "../../Actions/BASE_URL";
 
 const Payment = () => {
   // getting data from orderInfo which contains all prices like tax,subtotal.etc.
@@ -59,7 +60,7 @@ const Payment = () => {
     try {
       const config = { headers: { "Content-Type": "application/json" } };
       const { data } = await axios.post(
-        "/api/v1/payment/process",
+        `${BASE_URL}/api/v1/payment/process`,
         paymentData,
         config
       ); // post payment request to server with stripe

@@ -64,10 +64,11 @@ const ShippingInfo = () => {
       <div className="shippingBox">
         <h2 className="shippingHeading">Shipping Details</h2>
 
-        <form onSubmit={ShippingSubmit} className="shippingForm">
+        <form onSubmit={ShippingSubmit} className="shippingForm w-full sm:w-[80%] md:w-[50%]">
           <div className="address-input  form-input">
-            <HomeIcon />
+            <HomeIcon className="mr-10" />
             <TextField
+            fullWidth
               id="outlined-basic"
               label="Address"
               variant="outlined"
@@ -78,8 +79,9 @@ const ShippingInfo = () => {
           </div>
 
           <div className="city-input form-input">
-            <LocationCityIcon />
+            <LocationCityIcon className="mr-10" />
             <TextField
+            fullWidth
               id="outlined-basic"
               label="City"
               variant="outlined"
@@ -90,8 +92,9 @@ const ShippingInfo = () => {
           </div>
 
           <div className="pin-input form-input">
-            <PinDropIcon />
+            <PinDropIcon className="mr-10" />
             <TextField
+            fullWidth
               id="outlined-basic"
               label="Pin Code"
               variant="outlined"
@@ -102,8 +105,9 @@ const ShippingInfo = () => {
           </div>
 
           <div className="phone-input form-input">
-            <PhoneIcon />
+            <PhoneIcon className="mr-10" />
             <TextField
+            fullWidth
               id="outlined-basic"
               label="Phone no."
               variant="outlined"

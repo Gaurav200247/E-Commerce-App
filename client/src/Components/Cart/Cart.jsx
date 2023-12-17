@@ -38,7 +38,7 @@ const Cart = () => {
   };
 
   return (
-    <>
+    <div className="h-screen">
       {cartItems.length === 0 ? (
         <div className="emptyCart">
           <RemoveShoppingCartIcon />
@@ -109,7 +109,7 @@ const Cart = () => {
           </div>
         </>
       )}
-    </>
+    </div>
   );
 };
 
