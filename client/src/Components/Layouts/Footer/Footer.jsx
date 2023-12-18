@@ -8,14 +8,14 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className=" text-white flex justify-between items-center w-full">
+    <footer className=" text-white flex justify-center items-center w-full">
       {/* --------------------------------- */}
-      <div className="left-footer flex flex-col justify-between items-center">
+      {/* <div className="left-footer flex flex-col justify-between items-center">
         <h1>DOWNLOAD OUR APP</h1>
         <p>Download App for Android and IOS mobile phone</p>
         <img src={PlayStore} alt="playstore-download-icons" />
         <img src={AppStore} alt="appstore-download-icons" />
-      </div>
+      </div> */}
       {/* --------------------------------- */}
       <div className="mid-footer flex flex-col justify-between items-center">
         <div className="logo flex justify-between items-center">
@@ -24,10 +24,10 @@ const Footer = () => {
 
         <p className="mt-2">High quality is our first priority</p>
 
-        <p>Copyrights 2022 &copy; Gaurav Gupta</p>
+        {/* <p>Copyrights 2022 &copy; Gaurav Gupta</p> */}
       </div>
       {/* --------------------------------- */}
-      <div className="right-footer flex flex-col justify-between items-center">
+      {/* <div className="right-footer flex flex-col justify-between items-center">
         <h4>Follow Us</h4>
         <div className="follow-icons-container flex justify-between items-center w-full">
           <a
@@ -49,7 +49,7 @@ const Footer = () => {
             <BsDiscord />
           </a>
         </div>
-      </div>
+      </div> */}
       {/* --------------------------------- */}
     </footer>
   );
